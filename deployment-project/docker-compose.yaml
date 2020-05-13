@@ -23,7 +23,7 @@ services:
     depends_on:
       - db
     volumes:
-      staticfiles:/home/app/web/staticfiles
+      - staticfiles:/home/app/web/staticfiles
   nginx:
     container_name: nginx
     image: nginx:mainline-alpine
@@ -38,3 +38,4 @@ services:
 
 volumes:
   postgres-data:
+  staticfiles:
